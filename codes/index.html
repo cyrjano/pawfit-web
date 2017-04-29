@@ -9,7 +9,13 @@
   <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="jquery/3.2.1/jquery.min.js"></script>
   <script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script>
+  $(function(){
+    setInterval(function(){
+      $('#dateDiv').text(new Date())
+    },1000)
+  })
+  </script>
   <!-- Link to style.css -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -38,7 +44,9 @@
     		<li><a href="people.html">People</a></li>
     		<li><a href="Contact.html">Contact</a></li>
     		<li><a href="feedback.html">Feedback</a></li>
+        <li>
       </ul>
+      <p id="dateDiv" class="navbar-text navbar-right">Date</p></li>
     </div>
   </div>
 </nav>
