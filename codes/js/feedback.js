@@ -5,6 +5,7 @@ $(function(){
     modal.find('#feedbackForm').get(0).reset()
     modal.find('#ageGroup').removeClass('has-error');
     modal.find('#ageHelpBlock').addClass('hidden');
+    modal.find('#productInput').val(button.data('product'))
   });
   $('#sendFeedback').on('click', function(event){
     var modal = $('#feedbackModal');
