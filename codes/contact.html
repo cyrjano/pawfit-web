@@ -4,25 +4,42 @@
   <title>The Pawfit</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- BootStrap code -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="jquery/3.2.1/jquery.min.js"></script>
+  <script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <!-- Link to style.css -->
-  <link rel="stylesheet" type="text/css" href="C:\Users\gemma\Desktop\style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 <!-- Top nav bar links -->
-<div class="topnav" id="myTopnav">
-		<a href="C:\Users\gemma\Desktop\index.html">Home</a>
-		<a href="C:\Users\gemma\Desktop\products.html">Products</a>
-		<a href="C:\Users\gemma\Desktop\people.html">People</a>
-		<a href="C:\Users\gemma\Desktop\Contact.html">Contact</a>
-		<a href="C:\Users\gemma\Desktop\feedback.html">Feedback</a>
-</div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          🐾Pawfit
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar-collapse" class="navbar-collapse">
+        <ul class="nav navbar-nav">
+      		<li><a href="products.html">Products</a></li>
+      		<li><a href="people.html">People</a></li>
+      		<li class="active"><a href="Contact.html">Contact</a></li>
+      		<li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- end navbar-->
 
 
 
