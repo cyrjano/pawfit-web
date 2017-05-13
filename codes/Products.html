@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="jquery/3.2.1/jquery.min.js"></script>
   <script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script src="js/bootstrap-rating-input.min.js"></script>
+  <script src="js/feedback.js"></script>
   <!-- Link to style.css -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -31,23 +32,143 @@
         </div>
         <div id="navbar-collapse" class="navbar-collapse">
           <ul class="nav navbar-nav">
-        		<li class="active"><a href="products.html">Products</a></li>
-        		<li><a href="people.html">People</a></li>
-        		<li><a href="Contact.html">Contact</a></li>
-        		<li><a href="feedback.html">Feedback</a></li>
+        		<li class="active"><a href="Products.html">Products</a></li>
+        		<li><a href="People.html">People</a></li>
           </ul>
         </div>
       </div>
     </nav>
   <!-- end navbar-->
+  <!-- Products -->
+  <div class="container">
+    <h1>Products</h1>
+    <div class="row">
+
+      <!--jedi-->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+          <a href="images/jedi.jpg"><img src="images/jedi.jpg" class="img-responsive"></a>
+          <div class="caption">
+            <h3>Jedi <span class="label label-danger">$19.99</span></h3>
+            <p> BLAH BLAH BLAH BLAH BLAH</p>
+            <p>
+              <button class="btn btn-primary" data-toggle="modal" data-product="jedi" data-target="#feedbackModal">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Leave Feedback
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--minion-->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+          <a href="images/minion.jpg"><img src="images/minion.jpg" class="img-responsive"></a>
+          <div class="caption">
+            <h3>minion <span class="label label-danger">$19.99</span></h3>
+            <p> BLAH BLAH BLAH BLAH BLAH</p>
+            <p>
+              <button class="btn btn-primary" data-toggle="modal" data-product="minion" data-target="#feedbackModal">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Leave Feedback
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix visible-sm-block"></div>
+      <!--pokemon-->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+          <a href="images/pokemon.jpg"><img src="images/pokemon.jpg" class="img-responsive"></a>
+          <div class="caption">
+            <h3>pokemon <span class="label label-danger">$19.99</span></h3>
+            <p> BLAH BLAH BLAH BLAH BLAH</p>
+            <p>
+              <button class="btn btn-primary" data-toggle="modal" data-product="pokemon" data-target="#feedbackModal">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Leave Feedback
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix visible-lg-block visible-md-block"></div>
+
+      <!--wonderwoman-->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+          <a href="images/wonderwoman.jpg"><img src="images/wonderwoman.jpg" class="img-responsive"></a>
+          <div class="caption">
+            <h3>wonderwoman <span class="label label-danger">$19.99</span></h3>
+            <p> BLAH BLAH BLAH BLAH BLAH</p>
+            <p>
+              <button class="btn btn-primary" data-toggle="modal" data-product="wonderwoman" data-target="#feedbackModal">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Leave Feedback
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+      <!--batman-->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+          <a href="images/batman.jpg"><img src="images/batman.jpg" class="img-responsive"></a>
+          <div class="caption">
+            <h3>Batman <span class="label label-danger">$19.99</span></h3>
+            <p> BLAH BLAH BLAH BLAH BLAH</p>
+            <p>
+              <button class="btn btn-primary" data-toggle="modal" data-product="batman" data-target="#feedbackModal">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Leave Feedback
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
 
 
+    </div>
+  </div>
 
-
-
-
-
-
-
+  <!--Feedback modal-->
+  <div id="feedbackModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Product Feedback</h4>
+        </div>
+        <div class="modal-body">
+          <form id="feedbackForm" action="feedback.php" method="post">
+            <div class="form-group">
+              <label  for="nameInput">Name</label>
+              <input type="text" name="name" class="form-control" id="nameInput" placeholder="Your name here">
+            </div>
+            <div id="ageGroup" class="form-group">
+              <label class="control-label" for="ageInput">Age</label>
+              <input type="number" name="age" class="form-control" id="ageInput" aria-describedby="helpBlock2">
+              <span  id="ageHelpBlock" class="help-block hidden">
+                You need to be at least 18 years old to provide feedback.
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="ratingInput">Rating</label>
+              <input type="number" name="score" class="rating" id="ratingInput">
+            </div>
+            <div class="form-group">
+              <label for="feedbackTextarea">Feedback</label>
+              <textarea id="feedbackTextarea" name="feedback" class="form-control" rows="3"></textarea>
+            </div>
+            <input type="hidden" id="productInput" name="product" value="product"/>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="sendFeedback" class="btn btn-primary"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Send</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 </body>
 </html>
